@@ -6,6 +6,8 @@ e-mail: matushevskayaanastasia@gmail.com
 
 git: anastasia-v-m
 
+discord: AnastasiaM#4579
+
 
 **About me**
 
