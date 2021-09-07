@@ -63,7 +63,7 @@ function changeImg() {
 		
 **Expirience**
 
-I work in IT for 6 years.
+I work as an 1S programmer.
 
 **English language**
 
