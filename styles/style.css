@@ -3,85 +3,77 @@
     --basebkgr-light: #c7c7c6; 
     --baseclr: #4b3b0f;  
     --baseclr-light: #665019;
-    --sndclr: #ffe;  
+    --sndclr: #ffffee;  
     --space: 20px;
 }
 
 /*---------------header-----------------*/
 .header {
-    display: flex;
+    /*display: flex;*/
     grid-area: header;
+    display: inline;
     padding: 15px;
     vertical-align: middle;
-    display: inline;
     background-color: var(--basebkgr);
 }
 
 .logo {
     position: relative;
+    float: left;
     width: 120px;
     font-size: 48px;
-    /*border: 1px solid;*/
-    float: left;
 }
 
 #logom {
+    color: #ffffff;
     background: var(--basebkgr);
-    color: #fff;
     border: 1px solid var(--sndclr);
 }
 
 #logoa {
     margin:-26px 0 0 40px;
-    border: var(--basebkgr) 1px solid;
-    color: var(--basebkgr);
     text-align: center;
+    color: var(--basebkgr);
+    border: var(--basebkgr) 1px solid;
 }
 
 .logo > div {
     float: left;
-    overflow: hidden;
     width: 60px;
     height:60px;
     background: var(--sndclr);
+    overflow: hidden;
 }
 
 nav {
-    /*top: 48px;*/
-
     display: flex;
-    justify-content: space-around;
-    text-align: center;
-    margin: auto;
-    
     width: 420px;
     height: 96px;
-    
-    
+    margin: auto;
+    justify-content: space-around;
+    text-align: center;
 }
 
 nav a {
-	display: inline-block;
-    color: var(--baseclr);
+	position: relative;
+	top: 36px;
+    display: inline-block;
+    font-size: 24px; 
     line-height: 1; 
-	text-decoration: none;
-    cursor: pointer;
-    position: relative;
-	font-size: 24px;    
-    top: 36px;
+	color: var(--baseclr);
+    text-decoration: none;
+    cursor: pointer;  
 }
 
 nav a:after {
-	display: block;
-	content: "";
-	background-color: var(--baseclr); /*цвет линии*/
+	position: absolute;
+    left: 50%;
+    right: 50%;
+    display: block;
 	height: 2px; /*ширина линии*/
     width: 0;/*длина линии до наведения курсора*/
-    left: 50%;
-    position: absolute;
-    /*bottom: 0;*/
-    right: 50%;
-	
+    background-color: var(--baseclr); /*цвет линии*/
+	content: "";
     -webkit-transition: width 1s ease-in-out;
     -moz--transition: width 1s ease-in-out;
     transition: width 0.75s ease-in-out;/*время анимации*/ 
@@ -104,11 +96,9 @@ nav a:focus:after {
     grid-area: sidebar;
     padding: 15px;
     background-color: var(--basebkgr);
-    /*border-top-right-radius: 12px;*/
 }
 
 #contacts {
-    /*background: var(--sndclr);*/
     border-radius: 5px;
 }
 
@@ -117,30 +107,33 @@ nav a:focus:after {
     list-style-type: none;
 } 
   
-#english{
+#english {
+    margin-bottom: 0.2rem;
     padding-left: 2rem;
-    background-image: url(./pictures/gb_pic.png);
+    background-image: url(../pictures/gb_pic.png);
     background-position: 0 0;
     background-size: 1rem 1rem;
-    background-repeat: no-repeat;
-    margin-bottom: 0.2rem;
+    background-repeat: no-repeat;   
 }
 
-#italian{
+#italian {
+    margin-bottom: 0.2rem;
     padding-left: 2rem;
-    background-image: url(./pictures/italian_pic.png);
+    background-image: url(../pictures/italian_pic.png);
     background-position: 0 0;
     background-size: 1rem 1rem;
-    background-repeat: no-repeat;
-    margin-bottom: 0.2rem;
+    background-repeat: no-repeat;   
+}
+
+.langlevel {
+    font-weight: 700;
 }
 
 aside h4 {
+    margin-left: 0px;
+    padding-left: 10px;
     color: var(--baseclr);
     background: var(--sndclr);
-    padding-left: 10px;
-    margin-left: 0px;
-    /*border: 1px solid;*/
     border-radius: 12px;    
 }
 
@@ -151,8 +144,8 @@ aside h4:hover {
 }
 
 .photo img {
-    margin: auto;
     display: flex;
+    margin: auto;
     justify-content: space-between;    
 }
 
@@ -160,20 +153,18 @@ aside h4:hover {
 body {
     vertical-align: middle;    
     color: var(--baseclr);
-
 }
 
 .container {
-    width: 900px;
-    border: 1px solid #121212;
-    margin: auto; /*выравнивание по центру*/
-    display: grid;
     grid-template-areas: "header header"
                         "sidebar maininfo"
                         "foot foot";
-
     grid-template-rows: repeat(3);
     grid-template-columns: 1fr 3fr;
+    display: grid;
+    width: 900px;
+    margin: auto; /*выравнивание по центру*/
+    border: 1px solid #121212; 
 }
 
 /*---------------main info-----------------*/
@@ -184,15 +175,13 @@ body {
 
 section {
     padding: 0px;
-    /*border: 1px solid;*/
 }
 
 h4 {
+    margin-left: 0px;
+    padding-left: 10px;
     color: var(--sndclr);
     background: var(--basebkgr);
-    padding-left: 10px;
-    margin-left: 0px;
-    /*border: 1px solid;*/
     border-radius: 12px;
 }
 
@@ -207,15 +196,11 @@ p {
 }
 
 h1 {
-    /*background: var(--basebkgr);*/
-    padding: 0px;
     margin-left: -15px;
     margin-right: -15px;
-    /*margin: auto;*/
-    text-align: center;
-    /*border: 1px solid;*/
-    /*border-top-right-radius: 12px;*/
+    padding: 0px;
     font-size: 48px;
+    text-align: center;
 }
 
 li {
@@ -223,52 +208,48 @@ li {
 }
 
 /*---------------code-----------------*/
-
 .code {
     grid-area: code;
 }
 
 .code {
-    /*margin: -100px;*/
-    background-color: #3b3b3b;
-    /*position: relative;
-    left: 0px;*/
-    color: #fff;
-    margin-left: -220px; 
+    margin-left: -220px;
+    color: #ffffff;
+    background-color: #3b3b3b;     
 }
 
 .method {
-    color: rgb(243, 232, 169);
+    color: rgb(243, 232, 169, 1);
 }
 
 .string {
-    color: rgb(153, 78, 78);    
+    color: rgb(153, 78, 78, 1);    
 }
 
 .declaration {
-    color: cadetblue;    
+    color: rgb(95, 158, 160, 1);    
 }
 
 .operator {
-    color: cornflowerblue;    
+    color: rgb(100, 149, 237, 1);    
 }
 
 .number {
-    color: rgb(115, 250, 115);
+    color: rgb(115, 250, 115, 1);
 }
 
 .condition {
-    color:darkmagenta;
+    color:rgb(139, 0, 139, 1);
 }
 
 .code p {
-    padding: 0px;
     margin-bottom: -10px;
+    padding: 0px;
 }
 
 .code p:last-child {
-    padding: 0px;
     margin-bottom: 15px;
+    padding: 0px;
 }
 
 .space {
@@ -285,15 +266,15 @@ li {
 
 .work {
     padding: 15px;
-    color: var(--baseclr);
     font-weight: 700;
     text-decoration: none;
     text-shadow: none;
+    color: var(--baseclr);
 }
     
 .work:hover {
-    color: var(--baseclr-light);
     font-weight: 600;
+    color: var(--baseclr-light);
 }
 
 #about .work {
@@ -303,20 +284,21 @@ li {
 /*---------------footer-----------------*/
 footer {
     grid-area: foot;
-    background-color: var(--basebkgr);
     display: flex;
     justify-content: space-between;
-    color: var(--sndclr);
+    color: #ffffff;
+    background-color: var(--basebkgr);
 }
 
 .created {
     margin: auto;
+    font-weight: 800;
 }
 
-footer div:first-child{
+footer div:first-child {
     padding-left: 15px;
 }
 
-footer div:last-child{
+footer div:last-child {
     padding-right: 15px;
 }
