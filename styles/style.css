@@ -1,0 +1,291 @@
+:root {
+    --basebkgr: #b6b6b5; 
+    --basebkgr-light: #c7c7c6; 
+    --baseclr: #4b3b0f;  
+    --baseclr-light: #665019;
+    --sndclr: #ffffee;  
+    --space: 20px;
+    --dblspace: 40px;
+}
+
+/*---------------header-----------------*/
+.header {
+    /*display: flex;*/
+    grid-area: header;
+    display: inline;
+    padding: 15px;
+    vertical-align: middle;
+    background-color: var(--basebkgr);
+}
+
+.logo {
+    position: relative;
+    float: left;
+    width: 120px;
+    font-size: 48px;
+}
+
+#logom {
+    color: #ffffff;
+    background: var(--basebkgr);
+    border: 1px solid var(--sndclr);
+}
+
+#logoa {
+    margin:-26px 0 0 40px;
+    text-align: center;
+    color: var(--basebkgr);
+    border: var(--basebkgr) 1px solid;
+}
+
+.logo > div {
+    float: left;
+    width: 60px;
+    height:60px;
+    background: var(--sndclr);
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    width: 420px;
+    height: 96px;
+    margin: auto;
+    justify-content: space-around;
+    text-align: center;
+}
+
+nav a {
+	position: relative;
+	top: 36px;
+    display: inline-block;
+    font-size: 24px; 
+    line-height: 1; 
+	color: var(--baseclr);
+    text-decoration: none;
+    cursor: pointer;  
+}
+
+nav a:after {
+	position: absolute;
+    left: 50%;
+    right: 50%;
+    display: block;
+	height: 2px; /*ширина линии*/
+    width: 0;/*длина линии до наведения курсора*/
+    background-color: var(--baseclr); /*цвет линии*/
+	content: "";
+    -webkit-transition: width 1s ease-in-out;
+    -moz--transition: width 1s ease-in-out;
+    transition: width 0.75s ease-in-out;/*время анимации*/ 
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);  
+}
+
+nav a:hover:after,
+nav a:focus:after {
+	width: 100%; /*100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.small {
+    font-size: 0.75rem;
+}
+
+/*---------------side-----------------*/
+.sidebar {
+    grid-area: sidebar;
+    padding: 15px;
+    background-color: var(--basebkgr);
+}
+
+#contacts {
+    border-radius: 5px;
+}
+
+#langlist {
+    padding-left: 1rem;
+    list-style-type: none;
+} 
+  
+#english {
+    margin-bottom: 0.2rem;
+    padding-left: 2rem;
+    background-image: url(../pictures/gb_pic.png);
+    background-position: 0 0;
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;   
+}
+
+#italian {
+    margin-bottom: 0.2rem;
+    padding-left: 2rem;
+    background-image: url(../pictures/italian_pic.png);
+    background-position: 0 0;
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;   
+}
+
+.langlevel {
+    font-weight: 700;
+}
+
+aside h4 {
+    margin-left: 0px;
+    padding-left: 10px;
+    color: var(--baseclr);
+    background: var(--sndclr);
+    border-radius: 12px;    
+}
+
+aside h4:hover {
+    margin-right: -20px;
+    margin-left: 0px;
+    background: var(--sndclr);
+}
+
+.photo img {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;    
+}
+
+/*---------------container-----------------*/
+body {
+    vertical-align: middle;    
+    color: var(--baseclr);
+}
+
+.container {
+    grid-template-areas: "header header"
+                        "sidebar maininfo"
+                        "foot foot";
+    grid-template-rows: repeat(3);
+    grid-template-columns: 1fr 3fr;
+    display: grid;
+    width: 900px;
+    margin: auto; /*выравнивание по центру*/
+    border: 1px solid #121212; 
+}
+
+/*---------------main info-----------------*/
+.maininfo {
+    grid-area: maininfo;
+    padding: 15px;
+}
+
+section {
+    padding: 0px;
+}
+
+h4 {
+    margin-left: 0px;
+    padding-left: 10px;
+    color: var(--sndclr);
+    background: var(--basebkgr);
+    border-radius: 12px;
+}
+
+h4:hover {
+    margin-left: -20px;
+    background: var(--basebkgr-light);
+}
+
+p {
+    padding: 15px 7px 7px 30px;
+
+}
+
+h1 {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 0px;
+    font-size: 48px;
+    text-align: center;
+}
+
+li {
+    padding-bottom: 12px;
+}
+
+/*---------------code-----------------*/
+.code .space {
+    display: inline-block;
+    padding-left: var(--space);
+    padding-top: 0px;
+}
+
+.code {
+    grid-area: code;
+    margin-left: -220px;
+    padding-bottom: 0px;
+    color: #ffffff;
+    background-color: #3b3b3b;     
+}
+
+.method {
+    color: rgb(243, 232, 169, 1);
+}
+
+.string {
+    color: rgb(153, 78, 78, 1);    
+}
+
+.declaration {
+    color: rgb(95, 158, 160, 1);    
+}
+
+.operator {
+    color: rgb(100, 149, 237, 1);    
+}
+
+.number {
+    color: rgb(115, 250, 115, 1);
+}
+
+.condition {
+    color:rgb(139, 0, 139, 1);
+}
+
+.codeexample {
+    text-decoration: none;
+}
+
+.work {
+    padding: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: none;
+    color: var(--baseclr);
+}
+    
+.work:hover {
+    font-weight: 600;
+    color: var(--baseclr-light);
+}
+
+#about .work {
+    padding: 0px;
+}
+
+/*---------------footer-----------------*/
+footer {
+    grid-area: foot;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    background-color: var(--basebkgr);
+}
+
+.created {
+    margin: auto;
+    font-weight: 800;
+}
+
+footer div:first-child {
+    padding-left: 15px;
+}
+
+footer div:last-child {
+    padding-right: 15px;
+}
