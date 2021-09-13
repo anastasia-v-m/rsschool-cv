@@ -5,6 +5,7 @@
     --baseclr-light: #665019;
     --sndclr: #ffffee;  
     --space: 20px;
+    --dblspace: 40px;
 }
 
 /*---------------header-----------------*/
@@ -208,12 +209,16 @@ li {
 }
 
 /*---------------code-----------------*/
-.code {
-    grid-area: code;
+.code .space {
+    display: inline-block;
+    padding-left: var(--space);
+    padding-top: 0px;
 }
 
 .code {
+    grid-area: code;
     margin-left: -220px;
+    padding-bottom: 0px;
     color: #ffffff;
     background-color: #3b3b3b;     
 }
@@ -240,24 +245,6 @@ li {
 
 .condition {
     color:rgb(139, 0, 139, 1);
-}
-
-.code p {
-    margin-bottom: -10px;
-    padding: 0px;
-}
-
-.code p:last-child {
-    margin-bottom: 15px;
-    padding: 0px;
-}
-
-.space {
-    padding-left: var(--space);
-}
-
-.code .doublespace {
-    padding-left: var(--space);
 }
 
 .codeexample {

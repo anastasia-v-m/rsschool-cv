@@ -23,9 +23,9 @@
         </header>
         
         <aside class="sidebar">
-            <section class="photo">
+            <div class="photo">
                 <img src="./pictures/photoCV.JPG" alt="photo" width="175" height="187">
-            </section>  
+            </div>  
             <section id="contacts">
                 <h4>Contacts</h4>
                 <ul>
@@ -85,34 +85,58 @@
                 <h4>Expample</h4>
                 <div class="code">
                     <code>
-                        <p><span class="operator">function</span> <span class="method">changeImg</span>() {</p>
-                        <div class="space">
-                            <p><span class="operator">let</span> <span class="declaration">prefix</span> = <span class="declaration">(event.target.id)</span>;</p>
-                            <p><span class="condition">if</span> (<span class="declaration">prefix</span> === <span class="string">"reset_btn"</span>) {</p>
-                            <p class="doublespace"><span class="declaration">prefix</span> = <span class="string">"normal"</span>;</p>
-                            <p>}</p>
-                                
-                            <br>
-                            <p><span class="operator">const</span> <span class="declaration">root</span> = <span class="declaration">document</span>.<span class="method">querySelector</span>(<span class="string">':root'</span>);</p>
-                            <p><span class="operator">const</span> <span class="declaration">rootStyles</span> = <span class="method">getComputedStyle</span>(<span class="declaration">root</span>);</p>
-                            <p><span class="operator">const</span> <span class="declaration">styleSepia</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-sepia</span>');</p>
-                            <p><span class="operator">const</span> <span class="declaration">styleGrayscale</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-grayscale'</span>);</p>
-                            <p><span class="operator">const</span> <span class="declaration">styleBrightness</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-brightness'</span>);</p>
-                            <p><span class="operator">const</span> <span class="declaration">styleContrast</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-contrast'</span>);</p>
-                            <p><span class="operator">const</span> <span class="declaration">styleSaturate</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-saturate'</span>);</p>
-                            <p><span class="operator">const</span> <span class="declaration">mainImg</span> = <span class="declaration">document</span>.<span class="method">querySelector</span>(<span class="string">'.main-image'</span>);</p>
-                                
-                            <br>
-                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'sepia'</span>)[<span class="number">0</span><span class="declaration">value</span> = <span class="declaration">styleSepia</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleSepia.length</span><span class="number">-1</span>).<span class="method">trim</span>();</p>
-                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'grayscale'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleGrayscale</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleGrayscale.length</span><span class="number">-1</span>).<span class="method">trim</span>();</p>
-                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'brightness'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleBrightness</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleBrightness.length</span><span class="number">-1</span>).<span class="method">trim</span>();</p>
-                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'contrast'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleContrast</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleContrast.length</span><span class="number">-1</span>).<span class="method">trim</span>();</p>
-                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'invert'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="string">"0"</span>;</p>
-                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'saturate'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleSaturate</span>.<span class="method">substr</span>(<span class="number">0</span>0, <span class="declaration">styleSaturate.length</span><span class="number">-1</span>).<span class="method">trim</span>();</p>
-                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'blur'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="string">"0"</span>;</p>
-                            <p><span class="declaration">inputs</span>.<span class="method">forEach</span>(<span class="declaration">input => handleUpdate</span>.<span class="method">call</span>(input));</p>
-                        </div>
-                        <p>}</p>
+                        <br>
+                        <span class="operator">function</span> <span class="method">changeImg</span>() {
+                    </code>
+                    <code class="space">
+                        <br>
+                        <span class="operator">let</span> <span class="declaration">prefix</span> = <span class="declaration">(event.target.id)</span>;
+                        <br>
+                        <span class="condition">if</span> (<span class="declaration">prefix</span> === <span class="string">"reset_btn"</span>) {
+                        <br>
+                    
+                        <span class="declaration" style="padding-left: 20px;">prefix</span> = <span class="string">"normal"</span>;
+                    
+                        <br>}
+                            
+                        <br>
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">root</span> = <span class="declaration">document</span>.<span class="method">querySelector</span>(<span class="string">':root'</span>);
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">rootStyles</span> = <span class="method">getComputedStyle</span>(<span class="declaration">root</span>);
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">styleSepia</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-sepia</span>');
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">styleGrayscale</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-grayscale'</span>);
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">styleBrightness</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-brightness'</span>);
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">styleContrast</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-contrast'</span>);
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">styleSaturate</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-saturate'</span>);
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">mainImg</span> = <span class="declaration">document</span>.<span class="method">querySelector</span>(<span class="string">'.main-image'</span>);
+                            
+                        <br>
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'sepia'</span>)[<span class="number">0</span><span class="declaration">value</span> = <span class="declaration">styleSepia</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleSepia.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'grayscale'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleGrayscale</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleGrayscale.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'brightness'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleBrightness</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleBrightness.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'contrast'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleContrast</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleContrast.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'invert'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="string">"0"</span>;
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'saturate'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleSaturate</span>.<span class="method">substr</span>(<span class="number">0</span>0, <span class="declaration">styleSaturate.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'blur'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="string">"0"</span>;
+                        <br>
+                        <span class="declaration">inputs</span>.<span class="method">forEach</span>(<span class="declaration">input => handleUpdate</span>.<span class="method">call</span>(input));
+                    </code>
+                    <code>
+                        <br>}
                     </code>
                 </div>
             </section>
