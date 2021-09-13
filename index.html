@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Matushevskaya A.</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div id="logom">M</div>
+                <div id="logoa">A</div>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#softskills">Skills</a>
+                <a href="#code">Code</a>
+                <a href="#contacts">Contacts</a>
+            </nav>    
+        </header>
+        
+        <aside class="sidebar">
+            <div class="photo">
+                <img src="./pictures/photoCV.JPG" alt="photo" width="175" height="187">
+            </div>  
+            <section id="contacts">
+                <h4>Contacts</h4>
+                <ul>
+                    <li>e-mail: <span class="small">matushevskayaanastasia@gmail.com</span></li>
+                    <li>git: anastasia-v-m</li>
+                    <li>discord: AnastasiaM#4579</li>
+                </ul>
+            </section> 
+            <section class="languages">
+                <h4>Languages</h4>
+                <ul id="langlist">
+                    <li id="english">English<span class="langlevel"> B1</span></li>
+                    <li id="italian">Italian <span class="langlevel">A1</span></li>
+                </ul>
+            </section> 
+        </aside>
+
+        <main class="maininfo">
+            <h1>Matushevskaya Anastasia</h1>
+            <section id="about">
+                <h4>About me</h4>
+                <p>I have a higher education in economics. And some experience in sales and economics let me understand that this is not what I want develop in future. 
+                Since 2015 I work as an 1S programmer. And I want to achieve more in programming. So I have started to study JavaScript by myself on <a class="work" href="https://learn.javascript.ru/">learn.javascript.ru</a>. 
+                Now during RSSchool course I am going to structure my knowledge, 
+                gain hands-on experience and master skills to apply for a position of a junior JavaScript developer.</p>
+            </section>
+            <section>
+                <h4>Education</h4>
+                <p>Vitebsk State Univercity of Technology (Bachelor of Economics)</p>
+            </section>
+            <section class="expirience">
+                <h4>Expirience</h4>
+                <p>I work as an 1S programmer.</p>
+            </section>
+            <section id="softskills">
+                <h4>Soft skills</h4>
+                <ul>
+                    <li>Discipline</li>
+                    <li>Purposefulness</li>
+                    <li>Communication skills</li>
+                </ul>
+            </section>
+            <section id="hardskills">
+                <h4>Hard skills</h4>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Git</li>
+                </ul>
+            </section>
+            <section id="code">
+                <h4>Code</h4>
+                <div>
+                    <a class="work" href="https://rolling-scopes-school.github.io/anastasia-v-m-JSFEPRESCHOOL/js30-2">Full work</a>
+                </div>
+                <h4>Expample</h4>
+                <div class="code">
+                    <code>
+                        <br>
+                        <span class="operator">function</span> <span class="method">changeImg</span>() {
+                    </code>
+                    <code class="space">
+                        <br>
+                        <span class="operator">let</span> <span class="declaration">prefix</span> = <span class="declaration">(event.target.id)</span>;
+                        <br>
+                        <span class="condition">if</span> (<span class="declaration">prefix</span> === <span class="string">"reset_btn"</span>) {
+                        <br>
+                    
+                        <span class="declaration" style="padding-left: 20px;">prefix</span> = <span class="string">"normal"</span>;
+                    
+                        <br>}
+                            
+                        <br>
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">root</span> = <span class="declaration">document</span>.<span class="method">querySelector</span>(<span class="string">':root'</span>);
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">rootStyles</span> = <span class="method">getComputedStyle</span>(<span class="declaration">root</span>);
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">styleSepia</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-sepia</span>');
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">styleGrayscale</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-grayscale'</span>);
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">styleBrightness</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-brightness'</span>);
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">styleContrast</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-contrast'</span>);
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">styleSaturate</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-saturate'</span>);
+                        <br>
+                        <span class="operator">const</span> <span class="declaration">mainImg</span> = <span class="declaration">document</span>.<span class="method">querySelector</span>(<span class="string">'.main-image'</span>);
+                            
+                        <br>
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'sepia'</span>)[<span class="number">0</span><span class="declaration">value</span> = <span class="declaration">styleSepia</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleSepia.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'grayscale'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleGrayscale</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleGrayscale.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'brightness'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleBrightness</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleBrightness.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'contrast'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleContrast</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleContrast.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'invert'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="string">"0"</span>;
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'saturate'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleSaturate</span>.<span class="method">substr</span>(<span class="number">0</span>0, <span class="declaration">styleSaturate.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                        <br>
+                        <span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'blur'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="string">"0"</span>;
+                        <br>
+                        <span class="declaration">inputs</span>.<span class="method">forEach</span>(<span class="declaration">input => handleUpdate</span>.<span class="method">call</span>(input));
+                    </code>
+                    <code>
+                        <br>}
+                    </code>
+                </div>
+            </section>
+        </main>   
+        <footer>
+            <div>
+                <a href="https://rs.school/js/">
+                    <img src="./pictures/rs_school_js.svg" alt="rsschool" height="60">
+                </a>
+            </div>
+            <div class="created">2021</div>
+            <div>
+                <a href="https://github.com/anastasia-v-m">
+                    <img src="./pictures/Github_pic.png" alt="git" height="60">
+                </a>
+            </div>
+        </footer> 
+    </div>    
+</body>
+</html>
