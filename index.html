@@ -5,63 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Matushevskaya A.</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <div class="wrapper"
-        <header>
-            <h1>Name</h1>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div id="logom">M</div>
+                <div id="logoa">A</div>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#softskills">Skills</a>
+                <a href="#code">Code</a>
+                <a href="#contacts">Contacts</a>
+            </nav>    
         </header>
         
-        <main>
-            <section class="about">
-                <h4>About</h4>
-                <p>some text</p>
-            </section>
-            <section class="expirience">
-                <h4>Expirience</h4>
-                <p>some text</p>
-            </section>
-            <section class="softskills">
-                <h4>Soft skills</h4>
-                <ul>
-                    <li>ss1</li>
-                    <li>ss2</li>
-                </ul>
-            </section>
-            <section class="hardskills">
-                <h4>Hard skills</h4>
-                <ul>
-                    <li>ss1</li>
-                    <li>ss2</li>
-                </ul>
-            </section>
-            <section class="code">
-                <h4>Code</h4>
-                <code>some code</code>
-            </section>
-        </main>
-
-        <aside>
+        <aside class="sidebar">
             <section class="photo">
-                <img src="CV.JPG" alt="photo">
+                <img src="./pictures/photoCV.JPG" alt="photo" width="175" height="187">
             </section>  
-            <section class="contact">
-                <h4>Contact</h4>
+            <section id="contacts">
+                <h4>Contacts</h4>
                 <ul>
-                    <li>mail</li>
-                    <li>git</li>
-                    <li>discord</li>
+                    <li>e-mail: <span class="small">matushevskayaanastasia@gmail.com</span></li>
+                    <li>git: anastasia-v-m</li>
+                    <li>discord: AnastasiaM#4579</li>
                 </ul>
             </section> 
             <section class="languages">
                 <h4>Languages</h4>
-                <ul>
-                    <li>l1 <spab class="langlevel">lev</spab></li>
-                    <li>l2 <spab class="langlevel">lev2</spab></li>
+                <ul id="langlist">
+                    <li id="english">English<span class="langlevel"> B1</span></li>
+                    <li id="italian">Italian <span class="langlevel">A1</span></li>
                 </ul>
             </section> 
         </aside>
-    
+
+        <main class="maininfo">
+            <h1>Matushevskaya Anastasia</h1>
+            <section id="about">
+                <h4>About me</h4>
+                <p>I have a higher education in economics. And some experience in sales and economics let me understand that this is not what I want develop in future. 
+                Since 2015 I work as an 1S programmer. And I want to achieve more in programming. So I have started to study JavaScript by myself on <a class="work" href="https://learn.javascript.ru/">learn.javascript.ru</a>. 
+                Now during RSSchool course I am going to structure my knowledge, 
+                gain hands-on experience and master skills to apply for a position of a junior JavaScript developer.</p>
+            </section>
+            <section class="expirience">
+                <h4>Expirience</h4>
+                <p>I work as an 1S programmer.</p>
+            </section>
+            <section id="softskills">
+                <h4>Soft skills</h4>
+                <ul>
+                    <li>Discipline</li>
+                    <li>Purposefulness</li>
+                    <li>Communication skills</li>
+                </ul>
+            </section>
+            <section id="hardskills">
+                <h4>Hard skills</h4>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Git</li>
+                </ul>
+            </section>
+            <section id="code">
+                <h4>Code</h4>
+                <div><a class="work" href="https://rolling-scopes-school.github.io/anastasia-v-m-JSFEPRESCHOOL/js30-2">Full work</a></div>
+                <h4>Expample</h4>
+                <div class="code">
+                    <code>
+                        <p><span class="operator">function</span> <span class="method">changeImg</span>() {</p>
+                        <div class="space">
+                            <p><span class="operator">let</span> <span class="declaration">prefix</span> = <span class="declaration">(event.target.id)</span>;</p>
+                            
+                            <p><span class="condition">if</span> (<span class="declaration">prefix</span> === <span class="string">"reset_btn"</span>) {</p>
+                            <p class="doublespace"><span class="declaration">prefix</span> = <span class="string">"normal"</span>;</p>
+                            <p>}</p>
+                                
+                            <br>
+                            <p><span class="operator">const</span> <span class="declaration">root</span> = <span class="declaration">document</span>.<span class="method">querySelector</span>(<span class="string">':root'</span>);</p>
+                            <p><span class="operator">const</span> <span class="declaration">rootStyles</span> = <span class="method">getComputedStyle</span>(<span class="declaration">root</span>);</p>
+                            
+                            <p><span class="operator">const</span> <span class="declaration">styleSepia</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-sepia</span>');</p>
+                            <p><span class="operator">const</span> <span class="declaration">styleGrayscale</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-grayscale'</span>);</p>
+                            <p><span class="operator">const</span> <span class="declaration">styleBrightness</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-brightness'</span>);</p>
+                            <p><span class="operator">const</span> <span class="declaration">styleContrast</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-contrast'</span>);</p>
+                            <p><span class="operator">const</span> <span class="declaration">styleSaturate</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-saturate'</span>);</p>
+                
+                            <p><span class="operator">const</span> <span class="declaration">mainImg</span> = <span class="declaration">document</span>.<span class="method">querySelector</span>(<span class="string">'.main-image'</span>);</p>
+                                
+                            <br>
+                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'sepia'</span>)[<span class="number">0</span><span class="declaration">value</span> = <span class="declaration">styleSepia</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleSepia.length</span><span class="number">-1</span>).<span class="method">trim</span>();</p>
+                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'grayscale'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleGrayscale</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleGrayscale.length</span><span class="number">-1</span>).<span class="method">trim</span>();</p>
+                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'brightness'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleBrightness</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleBrightness.length</span><span class="number">-1</span>).<span class="method">trim</span>();</p>
+                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'contrast'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleContrast</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleContrast.length</span><span class="number">-1</span>).<span class="method">trim</span>();</p>
+                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'invert'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="string">"0"</span>;</p>
+                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'saturate'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleSaturate</span>.<span class="method">substr</span>(<span class="number">0</span>0, <span class="declaration">styleSaturate.length</span><span class="number">-1</span>).<span class="method">trim</span>();</p>
+                            <p><span class="declaration">document</span>.<span class="method">getElementsByName</span>(<span class="string">'blur'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="string">"0"</span>;</p>
+                
+                            <p><span class="declaration">inputs</span>.<span class="method">forEach</span>(<span class="declaration">input => handleUpdate</span>.<span class="method">call</span>(input));</p>
+                        </div>
+                        <p>}</p>
+                    </code>
+                </div>
+            </section>
+        </main>   
+        <footer>
+            <div><img src="./pictures/rs_school_js.svg" alt="rsschool" height="60"></div>
+            <div class="created">2021</div>
+            <div><img src="./pictures/Github_pic.png" alt="git" height="60"></div>
+        </footer> 
     </div>    
 </body>
 </html>
