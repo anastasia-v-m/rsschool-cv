@@ -10,9 +10,9 @@
 
 /*---------------header-----------------*/
 .header {
-    /*display: flex;*/
     grid-area: header;
     display: inline;
+    float: left;/*????*/
     padding: 15px;
     vertical-align: middle;
     background-color: var(--basebkgr);
@@ -46,10 +46,68 @@
     overflow: hidden;
 }
 
+#burger {
+    display: inline;
+    opacity: 0;
+}
+
+#burger:checked ~ .burgerbutton > span {
+    transform: rotate(45deg);
+}
+
+#burger:checked ~ .burgerbutton > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#burger:checked ~ .burgerbutton > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#burger:checked ~ nav {
+    left: 0;
+    visibility: visible;
+}
+
+.burgerbutton {
+    width: 26px;
+    height: 26px;
+    display: inline;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.burgerbutton > span,
+.burgerbutton > span::before,
+.burgerbutton > span::after {
+    position: absolute;
+    width: 26px;
+    height: 2px;
+    background-color: var(--baseclr);
+    transition-duration: .25s;
+}
+
+.burgerbutton > span::before {
+    top: -10px;
+    content: '';    
+}
+
+.burgerbutton > span::after {
+    top: 10px;
+    content: '';
+}
+
+.burgerbutton > span {
+    top: 60px;
+}
+
 nav {
     display: flex;
+    visibility: hidden; /***********************************************************/
     width: 420px;
-    height: 96px;
+    height: 76px;
     margin: auto;
     justify-content: space-around;
     text-align: center;
@@ -58,8 +116,8 @@ nav {
 nav a {
 	position: relative;
 	top: 36px;
-    display: inline-block;
-    font-size: 24px; 
+    display: inline;
+    font-size: 28px; 
     line-height: 1; 
 	color: var(--baseclr);
     text-decoration: none;
@@ -88,11 +146,11 @@ nav a:focus:after {
 	width: 100%; /*100% чтобы ссылка подчёркивалась полностью*/
 }
 
+/*---------------side-----------------*/
 .small {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
 }
 
-/*---------------side-----------------*/
 .sidebar {
     grid-area: sidebar;
     padding: 15px;
@@ -101,6 +159,22 @@ nav a:focus:after {
 
 #contacts {
     border-radius: 5px;
+}
+
+#contacts li {
+    list-style-type: none;
+}
+
+#contacts li:hover {
+    font-weight: 600;
+}
+
+#contacts ul {
+    padding-left: 10px;
+}
+
+.contacttype {
+    font-weight: 600;
 }
 
 #langlist {
@@ -150,24 +224,6 @@ aside h4:hover {
     justify-content: space-between;    
 }
 
-/*---------------container-----------------*/
-body {
-    vertical-align: middle;    
-    color: var(--baseclr);
-}
-
-.container {
-    grid-template-areas: "header header"
-                        "sidebar maininfo"
-                        "foot foot";
-    grid-template-rows: repeat(3);
-    grid-template-columns: 1fr 3fr;
-    display: grid;
-    width: 900px;
-    margin: auto; /*выравнивание по центру*/
-    border: 1px solid #121212; 
-}
-
 /*---------------main info-----------------*/
 .maininfo {
     grid-area: maininfo;
@@ -208,6 +264,22 @@ li {
     padding-bottom: 12px;
 }
 
+#contacts,
+.languages{
+    font-size: 20px;
+}
+
+#about,
+#hardskills,
+#softskills, 
+#edu,
+#code h4,
+#code .work,
+.expirience,
+.project {
+    font-size: 24px;
+}
+
 /*---------------code-----------------*/
 .code .space {
     display: inline-block;
@@ -218,9 +290,19 @@ li {
 .code {
     grid-area: code;
     margin-left: -220px;
+    padding-left: var(--space);
     padding-bottom: 0px;
     color: #ffffff;
-    background-color: #3b3b3b;     
+    background-color: #3b3b3b; 
+    overflow: auto;
+}
+
+.fst {
+    margin-left: -200px;
+}
+
+.startend {
+    margin-left: -220px;
 }
 
 .method {
@@ -268,6 +350,10 @@ li {
     padding: 0px;
 }
 
+.work img {
+    width: 300px;
+}
+
 /*---------------footer-----------------*/
 footer {
     grid-area: foot;
@@ -289,3 +375,96 @@ footer div:first-child {
 footer div:last-child {
     padding-right: 15px;
 }
+
+/*---------------container-----------------*/
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    /*width: 100%;*/
+    vertical-align: middle;    
+    color: var(--baseclr);
+}
+
+.container {
+    grid-template-areas: "header header"
+                        "sidebar maininfo"
+                        "foot foot";
+    grid-template-rows: repeat(3);
+    grid-template-columns: 1fr 3fr;
+    display: grid;
+    width: 900px;
+    margin: auto; /*выравнивание по центру*/
+    border: 1px solid #121212; 
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 20px;
+    }
+
+    .container {
+        grid-template-areas: "header"
+                        "sidebar"
+                        "maininfo"
+                        "foot";
+        
+        
+        display: grid flex;
+        clear: both;
+        max-width: 350px;
+        margin: auto; /*выравнивание по центру*/
+        margin-top: 5px;
+        border: none; 
+    }
+
+    .header {
+        grid-area: header;
+        display: inline;
+        max-width: 350px;
+        padding: 15px;
+        vertical-align: middle;
+        background-color: var(--basebkgr);
+    }
+
+    .code {
+        grid-area: code;
+        max-width: 350px;
+        margin: auto;
+        padding: 0px;
+        color: #ffffff;
+        background-color: #3b3b3b; 
+    }   
+
+    pre {
+        max-width: 350px;    
+        overflow-x: scroll;
+    }
+
+    .fst {
+        margin-left: -240px;
+    }
+
+    .startend {
+        margin-left: -260px;
+    }
+
+    nav a {
+        font-size: 20px;        
+    }
+
+    nav {
+        display: block;
+        visibility: hidden; /***********************************************************/
+        max-width: 280px;
+        height: 76px;
+        margin: auto;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    video {
+        width: 300px;
+    }
+  }
