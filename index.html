@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Matushevskaya A.</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./pictures/iconma.JPG" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div id="logom">M</div>
+                <div id="logoa">A</div>
+            </div>
+            
+            <input id="burger" type="checkbox" />
+            <label class="burgerbutton" for="burger">
+                <span></span>
+            </label>
+            
+            <nav>
+                <a href="#about">About</a>
+                <a href="#softskills">Skills</a>
+                <a href="#code">Code</a>
+                <a href="#contacts">Contacts</a>
+            </nav>    
+        </header>
+        
+        <aside class="sidebar">
+            <div class="photo">
+                <img src="./pictures/photoCV.JPG" alt="photo" width="175" height="187">
+            </div>  
+            <section id="contacts">
+                <h4>Contacts</h4>
+                <ul>
+                    <li><span class="contacttype">email:</span> <span class="small">matushevskayaanastasia@gmail.com</span></li>
+                    <li><span class="contacttype">git:</span> anastasia-v-m</li>
+                    <li><span class="contacttype">discord:</span> AnastasiaM#4579</li>
+                </ul>
+            </section> 
+            <section class="languages">
+                <h4>Languages</h4>
+                <ul id="langlist">
+                    <li id="english">English<span class="langlevel"> B1</span></li>
+                    <li id="italian">Italian <span class="langlevel">A1</span></li>
+                </ul>
+            </section> 
+            <button onClick="console.log('оценка 150: вёрстка валидная +10, вёрстка семантическая +20, используются css-стили +10, контент размещается в блоке, который горизонтально центрируется на странице. Фоновый цвет, если он есть, тянется во всю ширину страницы +10, вёрстка адаптивная +10, есть адаптивное бургер-меню +10, на странице СV присутствует изображение +10, перечени в виде списка +10, информация обо мне +10, код +10, изображения-ссылки на проекты +10, CV выполнено на английском языке +10, выполнены требования к Pull Request +10, есть видеорезюме автора CV на английском языке +10')">mark</button>
+        </aside>
+
+        <main class="maininfo">
+            <h1>Matushevskaya Anastasia</h1>
+            <section id="about">
+                <h4>About me</h4>
+                <p>I have a higher education in economics. And some experience in sales and economics let me understand that this is not what I want develop in future. 
+                Since 2015 I work as an 1S programmer. And I want to achieve more in programming. So I have started to study JavaScript by myself on <a class="work" href="https://learn.javascript.ru/">learn.javascript.ru</a>. 
+                Now during RSSchool course I am going to structure my knowledge, 
+                gain hands-on experience and master skills to apply for a position of a junior JavaScript developer.</p>
+            </section>
+            <section id="edu">
+                <h4>Education</h4>
+                <p>Vitebsk State Univercity of Technology (Bachelor of Economics)</p>
+            </section>
+            <section class="expirience">
+                <h4>Expirience</h4>
+                <p>I work as an 1S programmer.</p>
+            </section>
+            <section id="softskills">
+                <h4>Soft skills</h4>
+                <ul>
+                    <li>Discipline</li>
+                    <li>Purposefulness</li>
+                    <li>Communication skills</li>
+                </ul>
+            </section>
+            <section id="hardskills">
+                <h4>Hard skills</h4>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Git</li>
+                </ul>
+            </section>
+            <section id="code">
+                <h4>Code</h4>
+                <div>
+                    <a class="work" href="https://rolling-scopes-school.github.io/anastasia-v-m-JSFEPRESCHOOL/js30-2" target="_blank"><img src="./pictures/project.JPG" alt="project"></a>
+                    <p class="project">This application allows you to apply filters to photos (sepia, blur, contrast and others). It's done using HTML, CSS, JS.</p>
+                </div>
+                <h4>Expample</h4>
+                <div class="code">
+                    <pre>
+                        <code>
+                            <span class="operator startend">function</span> <span class="method">changeImg</span>() {
+    
+                            <span class="operator fst">let</span> <span class="declaration">prefix</span> = <span class="declaration">(event.target.id)</span>;
+                            <span class="condition fst">if</span> (<span class="declaration">prefix</span> === <span class="string">"reset_btn"</span>) {
+                            <span class="declaration fst" style="padding-left: 20px;">prefix</span> = <span class="string">"normal"</span>;
+                            <span class="operator fst">const</span> <span class="declaration">root</span> = <span class="declaration">document</span>.<span class="method">querySelector</span>(<span class="string">':root'</span>);
+                            <span class="operator fst">const</span> <span class="declaration">rootStyles</span> = <span class="method">getComputedStyle</span>(<span class="declaration">root</span>);
+                            <span class="operator fst">const</span> <span class="declaration">styleSepia</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-sepia</span>');
+                            <span class="operator fst">const</span> <span class="declaration">styleGrayscale</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-grayscale'</span>);
+                            <span class="operator fst">const</span> <span class="declaration">styleBrightness</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-brightness'</span>);
+                            <span class="operator fst">const</span> <span class="declaration">styleContrast</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-contrast'</span>);
+                            <span class="operator fst">const</span> <span class="declaration">styleSaturate</span> = <span class="declaration">rootStyles</span>.<span class="method">getPropertyValue</span>(<span class="string">'--'</span> + <span class="declaration">prefix</span> + <span class="string">'-saturate'</span>);
+                            <span class="operator fst">const</span> <span class="declaration">mainImg</span> = <span class="declaration">document</span>.<span class="method">querySelector</span>(<span class="string">'.main-image'</span>);
+
+                            <span class="declaration fst">document</span>.<span class="method">getElementsByName</span>(<span class="string">'sepia'</span>)[<span class="number">0</span><span class="declaration">value</span> = <span class="declaration">styleSepia</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleSepia.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                            <span class="declaration fst">document</span>.<span class="method">getElementsByName</span>(<span class="string">'grayscale'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleGrayscale</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleGrayscale.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                            <span class="declaration fst">document</span>.<span class="method">getElementsByName</span>(<span class="string">'brightness'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleBrightness</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleBrightness.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                            <span class="declaration fst">document</span>.<span class="method">getElementsByName</span>(<span class="string">'contrast'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleContrast</span>.<span class="method">substr</span>(<span class="number">0</span>, <span class="declaration">styleContrast.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                            <span class="declaration fst">document</span>.<span class="method">getElementsByName</span>(<span class="string">'invert'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="string">"0"</span>;
+                            <span class="declaration fst">document</span>.<span class="method">getElementsByName</span>(<span class="string">'saturate'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="declaration">styleSaturate</span>.<span class="method">substr</span>(<span class="number">0</span>0, <span class="declaration">styleSaturate.length</span><span class="number">-1</span>).<span class="method">trim</span>();
+                            <span class="declaration fst">document</span>.<span class="method">getElementsByName</span>(<span class="string">'blur'</span>)[<span class="number">0</span>].<span class="declaration">value</span> = <span class="string">"0"</span>;
+                            <span class="declaration fst">inputs</span>.<span class="method">forEach</span>(<span class="declaration">input => handleUpdate</span>.<span class="method">call</span>(input));
+                            
+                            <span class="startend">}</span>
+                        </code>
+                    </pre>
+                </div>
+            </section>
+            <section>
+                <h4>Video</h4>
+                <video controls>
+                    <source src="./video/CV3.mp4" type="video/mp4">
+                </video>
+            </section>
+        </main>   
+        <footer>
+            <div>
+                <a href="https://rs.school/js/">
+                    <img src="./pictures/rs_school_js.svg" alt="rsschool" height="60">
+                </a>
+            </div>
+            <div class="created">2 0 2 1</div>
+            <div>
+                <a href="https://github.com/anastasia-v-m">
+                    <img src="./pictures/Github_pic.png" alt="git" height="60">
+                </a>
+            </div>
+        </footer> 
+    </div>    
+</body>
+</html>
